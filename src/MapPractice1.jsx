@@ -8,7 +8,9 @@ export default function MapPractice1() {
         <div className="mapPractice">
             <h2>Map Practice 1</h2>
             <div className="emojiList">
-                This is where your emojis need to go! (See expected1.html)
+                {emojisArray.map(element => {
+                    return (<div className="emoji">{element}</div>)
+                })}
             </div>
         </div>
     );
