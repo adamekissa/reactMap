@@ -3,7 +3,7 @@ export default function MapPractice2() {
     const [movies, regenerate] = useMovieGenerator();
     console.log("movies", movies);
 
-    const showMovies = (movie => {
+    const listMovies = (movie => {
         return (
             <div className="movie">
                 <h2 className="title">{movie.title}</h2>
@@ -20,7 +20,7 @@ export default function MapPractice2() {
             <h2>Movie list</h2>
             <button onClick={regenerate}>Change Movies</button>
             <div className="movieList">
-                {movies.map(showMovies)}
+                {movies.map(listMovies)}
             </div>
         </div>
     );
